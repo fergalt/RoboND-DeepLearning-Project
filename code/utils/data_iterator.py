@@ -125,7 +125,6 @@ class BatchIteratorSimple(Iterator):
         
         batch_x = np.zeros((current_batch_size,) + self.image_shape, dtype=K.floatx())
 
-
         if self.training:
             batch_y = np.zeros(
                     (current_batch_size,) + self.image_shape[:2] + (self.num_classes,),
@@ -153,6 +152,7 @@ class BatchIteratorSimple(Iterator):
                 #    image, gt_image = shift_and_pad_augmentation(image, gt_image)
 
                 image = preprocess_input(image.astype(np.float32))
+                
                 batch_x[e,:,:,:] = image
                 batch_y[e,:,:,:] = gt_image
 
