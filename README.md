@@ -2,6 +2,7 @@
 
 ![Data Recording path](followme_image1.png)
 ![Image segmentation](followme_image2.png)
+
 The objective of the "Follow Me" project was to create, and train, a fully convolutional network model, such that a target “Hero” person could be identified in simulated images of a city, via image segmentation, with an IOU of greater than 0.40.
 
 The model and weights would then be fed to a simulated drone controller, to allow it to identify and follow the target.
